@@ -1,0 +1,144 @@
+$purple: #510ed8;
+
+.header-blured {
+  filter: blur(7px);
+  pointer-events: none;
+  will-change: filter;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.otherHeaderLogo {
+  display: block;
+  max-height: 55px;
+  width: auto;
+}
+
+.buttonLan {
+  color: #7c1de9 !important;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header {
+  height: 88px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  transition: position 0.3s ease;
+  position: absolute;
+}
+
+.flexebleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  height: 88px;
+}
+
+@media all and (max-width: 780px) {
+  .otherHeaderLogo {
+    max-width: 7em;
+  }
+
+  .container {
+    height: 40px;
+  }
+}
+
+@include media-mobile {
+  .header {
+    display: flex;
+  }
+
+  .widgetHeader {
+    display: unset;
+    width: 100%;
+  }
+}
+
+.header-fixed {
+  position: fixed;
+  height: 88px;
+  animation: slide-down 0.4s;
+}
+
+.header-promo {
+  background: transparent;
+}
+
+.header-mobile>div {
+  transform: none;
+  transition: transform 250ms ease;
+}
+
+.header-mobile__hidden>div {
+  transform: translateY(150px);
+  transition: transform 250ms ease;
+}
+
+.loaderCreateWallet {
+  display: block;
+  position: fixed;
+  z-index: 9999999999999999;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media all and (max-width: 480px) {
+  .container {
+    display: none;
+  }
+  .contawidge_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .imgWrapper {
+    width: calc(50% + 3.5em);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .flexebleHeader {
+    width: 100%;
+    padding: 5px 15px 10px;
+    top: 15px;
+    position: relative;
+  }
+}

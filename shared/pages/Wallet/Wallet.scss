@@ -1,0 +1,318 @@
+.wallet {
+  margin: 30px 0;
+  font-family: 'Manrope-Bold', sans-serif;
+}
+
+.hasCusomLogo {
+  margin: 30px 0;
+
+  ul {
+    margin-top: 0
+  }
+}
+
+.btc {
+  background: orange;
+}
+
+.walletTable {
+  width: 100%;
+
+  td:first-child {
+    padding-left: 0;
+  }
+}
+
+.yourAssets {
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+.yourAssetsHeading {
+  color: #1f2d48;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.yourAssetsDescr {
+  color: #8e9aa3;
+  font-size: 13px;
+  font-family: 'Manrope-Medium', sans-serif;
+  line-height: 150%;
+}
+
+.yourBalance {
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  height: fit-content;
+  font-family: 'Manrope-Bold', sans-serif;
+}
+
+.yourBalanceTop {
+  position: relative;
+  padding: 25px;
+}
+
+.yourBalanceDescr {
+  color: #8e9aa3;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.yourBalanceValue {
+  display: flex;
+  height: 44px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+
+  .loaderHolder {
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  img {
+    margin-top: -5px;
+    width: 10px;
+    margin-right: 7px;
+  }
+
+  p {
+    font-size: 32px;
+    line-height: 44px;
+    color: #1f2d48;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 25px;
+    color: #6144e5;
+    font-weight: bold;
+    margin-top: 5px;
+    position: absolute;
+    margin-left: 10px;
+  }
+
+  span.green {
+    color: #0ccf14;
+  }
+
+  span.red {
+    color: #ee5b51;
+  }
+}
+
+.yourBalanceBottomWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0.1;
+    content: '';
+    background: linear-gradient(180deg, #6144e5 0%, rgba(97, 68, 229, 0) 100%);
+  }
+
+  &_blured {
+    filter: blur(7px);
+    pointer-events: none;
+    will-change: filter;
+    // transition: filter ease 0.1s;
+  }
+}
+
+.yourBalanceBottom {
+  position: relative;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    width: 48%;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  button.button__invoice {
+    width: auto !important;
+    margin: 0 auto;
+  }
+}
+
+.yourBalanceCurrencies {
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 15px;
+  top: 25px;
+  justify-content: space-between;
+  display: flex;
+
+  span {
+    width: 1px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 1px;
+  }
+
+  button {
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Inter-Bold', sans-serif;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-size: 13px;
+    color: rgba(142, 154, 163, 0.5);
+  }
+
+  button.active {
+    color: #1f2d48;
+    filter: brightness(0);
+  }
+}
+
+.widgetBuild {
+  .yourBalanceBottom {
+    button {
+      width: 30%;
+    }
+  }
+}
+
+@media all and (min-width: 993px) {
+  .walletTable {
+    display: inline-table;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .widgetBuild {
+    .yourBalanceBottom {
+      flex-wrap: wrap;
+      height: auto;
+
+      &:before {
+        height: 156px;
+      }
+
+      button {
+        width: 48%;
+      }
+
+      button[id='exchangeBtn'] {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .walletTable {
+    display: inline-table;
+
+    td:first-child {
+      padding-left: 0px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .yourBalance,
+  .yourAssets {
+    box-shadow: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .walletTable {
+    display: inline-table;
+
+    td:first-child {
+      padding-left: 25px;
+      left: auto;
+    }
+  }
+
+  .yourBalanceBottom {
+    &:before {
+      display: none;
+    }
+  }
+
+  .yourAssets {
+    padding: 0;
+
+    button {
+      width: calc(100% - 65px);
+      margin: auto;
+    }
+  }
+
+  .yourBalance,
+  .yourBalanceCurrencies {
+    background: rgb(253, 253, 253);
+  }
+
+  .yourAssetsHeading,
+  .yourAssetsDescr {
+    padding: 0 25px;
+  }
+
+  .walletBalance {
+    width: 100%;
+  }
+
+  .yourBalance {
+    display: block;
+  }
+}
+
+@media all and (max-width: $media-mobile-end) {
+
+  .yourBalance,
+  .yourAssets {
+    margin: 20px 0 5px;
+  }
+
+  .yourBalanceBottom {
+    padding: 25px 25px 0;
+  }
+
+  .widgetBuild .yourBalanceBottom {
+    flex-wrap: wrap;
+
+    button {
+      width: 100%;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: 47%;
+      }
+
+      &:nth-child(n + 3) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

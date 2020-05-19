@@ -1,0 +1,32 @@
+.content {
+  margin: 0;
+  word-break: break-word;
+  text-align: center;
+}
+
+.sendBtnsWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.actionBtn {
+  width: calc(50% - 5px);
+  position: relative;
+}
+
+.fiatDepositRow {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+
+@include media-mobile {
+  .qr {
+    text-align: center;
+  }
+}
+
+.qr {
+  text-align: center;
+}

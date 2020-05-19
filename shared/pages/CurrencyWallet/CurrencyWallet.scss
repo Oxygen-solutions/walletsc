@@ -1,0 +1,235 @@
+.root {
+  position: static;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.currencyWalletWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  font-family: 'Manrope-Bold',sans-serif;
+}
+
+.currencyWalletActivityWrapper {
+  width: 66%;
+}
+
+.currencyWalletBalance {
+  width: 31%;
+  margin-top: 40px;
+}
+
+.currencyWalletActivity,
+.currencyWalletSwapHistory {
+  background: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 25px;
+  margin-top: 40px;
+  width: 100%;
+  padding-bottom: 70px;
+  z-index: 1;
+  position: relative;
+  h3 {
+    color: #1F2D48;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.currencyWalletSwapHistory {
+  padding-bottom: 5px;
+}
+
+
+.title {
+  padding: 1px 0 1px;
+  margin-top: 100px;
+  h1 {
+    margin: 0;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.currencyHistory {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-table;
+  z-index: 1;
+  position: relative;
+  thead {
+    border: none;
+  }
+  td,
+  td:first-child {
+    width: 100%;
+    font-family: 'Inter-Bold', sans-serif;
+    padding: 0;
+  }
+}
+
+.historyContent {
+  display: block;
+}
+
+.btc {
+  color: #000;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8E9AA3;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  line-height: 1.7;
+  font-family: 'Manrope-Bold',sans-serif;
+  p {
+    color: #1F2D48;
+    display: inline;
+    font-size: 16px;
+  }
+}
+
+.table {
+  width: 100%;
+}
+
+.inRow {
+  margin-top: 20px;
+  display: flex;
+  width: 445px;
+  justify-content:space-between;
+  font-family: 'Manrope-Bold',sans-serif;
+  button {
+    width: 140px;
+    font-size: 15px;
+  }
+}
+.inRowru {
+  margin-top: 20px;
+  display: flex;
+  width: 250px;
+  justify-content:space-between;
+}
+
+.button {
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+}
+
+.actions button:not(:last-child) {
+  margin-right: .5rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 40px;
+  display: inline-block;
+  line-height: 120%;
+  color: #1F2D48;
+  margin-bottom: 30px;
+  padding: 0px;
+  margin-top: -10px;
+}
+
+.widgetNav {
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.widgetNavItem {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.widgetNavItem.active {
+  a {
+    border-bottom: 3px solid #6144E5;
+    color: #1F2D48!important;
+  }
+}
+.widgetNavItemLink {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 140%;
+  padding-bottom: 10px;
+  color: #8E9AA3!important;
+}
+
+@include media-tablet-landscape-and-lower {
+  .info {
+    display: block;
+  }
+
+  .info span {
+    font-size: 1rem;
+  }
+}
+@include media-mobile {
+  .subtitle {
+    word-wrap: break-word;
+  }
+  .inRow {
+    justify-content: center;
+    width: auto;
+    button {
+      height: auto;
+      margin: 5px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .currencyWalletActivity,
+  .currencyWalletBalance {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+  .currencyWalletWrapper {
+    flex-direction: column;
+  }
+  .currencyWalletActivityWrapper {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .currencyWalletWrapper {
+    margin: 0 -20px;
+    flex-direction: column;
+  }
+  .currencyWalletActivity,
+  .currencyWalletBalance {
+    width: 100%;
+    box-shadow: none;
+    margin-top: 20px;
+    h3 {
+      font-size: 100%;
+    }
+  }
+  .currencyWalletBalance {
+    > div {
+      display: block;
+    }
+  }
+  .currencyWalletActivityWrapper {
+    width: 100%;
+  }
+}
+
