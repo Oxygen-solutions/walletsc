@@ -169,7 +169,7 @@
   },
   "dependencies": {
     "autosize": "^4.0.2",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bip32": "^2.0.5",
     "bip39": "^3.0.2",
     "bitcoinjs-lib": "^5.1.6",
