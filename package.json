@@ -135,7 +135,7 @@
     "lint-staged": "^8.2.1",
     "lodash": "^4.17.15",
     "node-gyp": "^3.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.3",
     "postcss-loader": "^2.1.4",
     "progress-bar-webpack-plugin": "^1.12.1",
